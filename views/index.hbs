@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   </head>
+   <body>
+		<div class="container">
+			<h1>
+				BÉ TẬP TÍNH
+			</h1>
+  			<div class="row">
+  				<div class="col-2">
+	  				 Số Thứ Nhất : 
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				Số Thứ Hai : 
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				Kết Quả : 
+	  				<br/>
+	  				<br/>
+	  				<br/>
+  				</div>
+	  			<div class="col-10">
+	  				<input type="text" id="num1" value="" size="35" onfocusout="nhap('1');">
+	  				&emsp;&emsp;&emsp;
+	  				<input type="radio" name="carculate" value="+" id="cong"> Cộng &emsp;&emsp;&emsp;
+  					<input type="radio" name="carculate" value="-" id="tru"> Trừ
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				<input type="text" value="" id="num2" size="35" onfocusout="nhap('so2');">
+	  				&emsp;&emsp;&emsp;
+	  				<input type="radio" name="carculate" value="*ca" id="nhan" > Nhân &emsp;&emsp;&emsp;
+  					<input type="radio" name="carculate" value="/" id="chia"> Chia
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				<input type="text" value="" name="" size="35" id="kq"> 
+	  				&emsp;&emsp;&emsp;
+	  				<input type="button" value="Tính" onclick="tinh('');">
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				
+  				</div>
+  				<div class="row">
+  					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thông Báo: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	  				<span id="thongbao" style="color:red"></span>
+  				</div>
+  			</div>	
+  		</div>
+
+		<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
