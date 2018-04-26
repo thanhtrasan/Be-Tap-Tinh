@@ -2,94 +2,64 @@
 <html>
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Bé tập tính</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-        crossorigin="anonymous">
-    <!-- Optional CSS -->
-    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/main.css" />
-</head>
-
-<body>
-
-    <div class="container-fluid  ">
-        <div class="container bglightgray ">
-            <h1 class="title">Bé tập tính</h1>
-            <div class="row">
-                <!-- First column -->
-                <div class="col-md-8 bgred">
-                    <div class="row equal">
-                        <div class="col-md-4">
-                            <label for="#1st-num">Số thứ nhất</label>
-                        </div>
-                        <div class="col-md-8">
-
-                            <input type="text" name="1st-num" id="1st-num" class="form-control" onfocusout="loseFocus(this)">
-                        </div>
-                    </div>
-                    <div class="row equal bgcyan">
-                        <div class="col-md-4">
-                            <label for="#2nd-num">Số thứ hai</label>
-                        </div>
-                        <div class="col-md-8">
-
-                            <input type="text" name="2nd-num" id="2nd-num" class="form-control" onfocusout="loseFocus(this)">
-                        </div>
-                    </div>
-                    <div class="row equal">
-                        <div class="col-md-4">
-                            <label for="#result">Kết quả</label>
-                        </div>
-                        <div class="col-md-8">
-
-                            <input type="text" name="result" id="result" class="form-control">
-                        </div>
-                    </div>
-                </div>
-                <!-- End first column -->
-
-                <!-- second col -->
-                <div class="col-md-4 bgcyan">
-                    <div class="row equal">
-                        <label class="radio-inline col-md-6">
-                            <input type="radio" name="operation" id="plus" value="plus"> Cộng</label>
-                        <label class="radio-inline col-md-6">
-                            <input type="radio" name="operation" id="minus" value="minus"> Trừ</label>
-
-                    </div>
-                    <div class="row equal bgred">
-
-                        <label class="radio-inline col-md-6">
-                            <input type="radio" name="operation" id="multiply" value="multiply"> Nhân</label>
-                        <label class="radio-inline col-md-6">
-                            <input type="radio" name="operation" id="divide" value="divide"> Chia</label>
-                    </div>
-
-                    <div class="row equal">
-                        <div class="col-md-12">
-                            <button type="button" class="btn btn-danger" onclick="calculate()">Tính</button>
-                        </div>
-                    </div>
-                </div>
-                <!-- End second col -->
-            </div>
-
-            <!-- notification -->
-            <div class="row">
-                <div class="col-md-3">
-                    <label>Thông báo</label>
-
-                </div>
-                <span class="col-md-9">
-                    <span id="notification"></span>
-                </span>
-            </div>
-
-        </div>
-    </div>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+   </head>
+   <body>
+		<div class="container">
+			<h1>
+				BÉ TẬP TÍNH
+			</h1>
+  			<div class="row">
+  				<div class="col-2">
+	  				 Số Thứ Nhất : 
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				Số Thứ Hai : 
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				Kết Quả : 
+	  				<br/>
+	  				<br/>
+	  				<br/>
+  				</div>
+	  			<div class="col-10">
+	  				<input type="text" id="num1" value="" size="35" onfocusout="nhap('1');">
+	  				&emsp;&emsp;&emsp;
+	  				<input type="radio" name="carculate" value="+" id="cong"> Cộng &emsp;&emsp;&emsp;
+  					<input type="radio" name="carculate" value="-" id="tru"> Trừ
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				<input type="text" value="" id="num2" size="35" onfocusout="nhap('so2');">
+	  				&emsp;&emsp;&emsp;
+	  				<input type="radio" name="carculate" value="*ca" id="nhan" > Nhân &emsp;&emsp;&emsp;
+  					<input type="radio" name="carculate" value="/" id="chia"> Chia
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				<input type="text" value="" name="" size="35" id="kq"> 
+	  				&emsp;&emsp;&emsp;
+	  				<input type="button" value="Tính" onclick="tinh('');">
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				<br/>
+	  				
+  				</div>
+  				<div class="row">
+  					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Thông Báo: &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+	  				<span id="thongbao" style="color:red"></span>
+  				</div>
+  			</div>	
+  		</div>
 
     <!-- Optional JavaScript -->
     <script src="assets/js/main.js"></script>

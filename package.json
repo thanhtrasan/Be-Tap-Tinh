@@ -1,8 +1,7 @@
 {
   "name": "betaptinh",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "nodemon ./bin/www"
   },
